@@ -1,0 +1,5 @@
+author: pherce
+name: FullXP
+main: me.pherce.FullXP.FullXP
+version: 1.0
+description: Players drop full experience on death.
