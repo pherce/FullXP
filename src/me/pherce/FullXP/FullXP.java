@@ -18,9 +18,11 @@ public class FullXP extends JavaPlugin implements Listener {
     
 	@EventHandler
     public void death(PlayerDeathEvent event){
+		if(event.getEntity().getPlayer().hasPermission("fullxp.grant")){
 		Player player = event.getEntity().getPlayer();
 		int xp = event.getEntity().getTotalExperience();
-		player.sendMessage(ChatColor.GOLD + "You just dropped " + xp + " experience! Hurry back to collect it all.");
 		event.setDroppedExp(xp);
+		player.sendMessage(ChatColor.GOLD + "You just dropped " + xp + " experience! Hurry back to collect it all.");
+		}
 	}
 }
